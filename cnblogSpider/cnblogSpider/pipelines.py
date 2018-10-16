@@ -35,6 +35,8 @@ class CnblogspiderPipeline(object):
             else:
                 self.ids_seen.add(item['hash_start_link'])
 
+        if not item['from_link']:
+            raise DropItem("Duplicate item found: %s" % item)
             
         return item
 

@@ -31,6 +31,7 @@ class CnblogsComSpider(scrapy.Spider):
             item = CnblogspiderItem()
             item['start_link'] = self.start_urls[0]
             item['hash_start_link'] = hashlib.md5(b'self.start_urls[0]').hexdigest()
+            item['from_link'] = str(response.url)
 
             if not link.startswith('http'):
                 inner_link = link

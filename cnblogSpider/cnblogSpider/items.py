@@ -14,6 +14,7 @@ class CnblogspiderItem(scrapy.Item):
     link = scrapy.Field() # 链接
     start_link = scrapy.Field()
     hash_start_link = scrapy.Field()
+    from_link = scrapy.Field()
 
 class JiandanItem(scrapy.Item):
 #    define the fields for your item here like:
