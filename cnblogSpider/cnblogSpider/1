@@ -1,0 +1,2188 @@
+2018-10-16 16:07:22 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: cnblogSpider)
+2018-10-16 16:07:22 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.2 (default, Sep 27 2018, 17:58:18) - [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Linux-3.10.0-327.el7.x86_64-x86_64-with-centos-7.2.1511-Core
+2018-10-16 16:07:22 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'cnblogSpider', 'CONCURRENT_REQUESTS': 100, 'DEPTH_LIMIT': '2', 'DEPTH_PRIORITY': 2, 'DOWNLOAD_DELAY': 2, 'DOWNLOAD_TIMEOUT': 15, 'NEWSPIDER_MODULE': 'cnblogSpider.spiders', 'REDIRECT_ENABLED': False, 'RETRY_ENABLED': False, 'ROBOTSTXT_OBEY': True, 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SPIDER_MODULES': ['cnblogSpider.spiders'], 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0'}
+2018-10-16 16:07:22 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-10-16 16:07:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-10-16 16:07:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-10-16 16:07:22 [py.warnings] WARNING: /home/www/scrapy20180929/cnblogSpider/cnblogSpider/pipelines.py:10: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2018-10-16 16:07:22 [scrapy.middleware] INFO: Enabled item pipelines:
+['cnblogSpider.pipelines.MongoPipeline']
+2018-10-16 16:07:22 [scrapy.core.engine] INFO: Spider opened
+2018-10-16 16:07:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-10-16 16:07:22 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-10-16 16:07:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/robots.txt> (referer: None)
+2018-10-16 16:07:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/> (referer: None)
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/htmleaf-demo.css内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/index.css内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/icon/iconfont.css内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'favicon.ico内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/jquery.min.js内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/header.js内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/carousel.js内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/2_02.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winsafety.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winiis.com/内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winiis.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winiis.com/内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'wincdn.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winiis.com/内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winicp.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winiis.com/内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': '#myCarousel内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': '#myCarousel内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winsafety.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/protect.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winsafety.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winiis.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/lj.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winiis.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winig.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/ig.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winig.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winicp.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/icp.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winicp.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winisp.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/jr.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winisp.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'wininternet.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/internet.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'wininternet.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'wincdn.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/cdn.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'wincdn.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winvirtualhost.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/virtural.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winvirtualhost.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winmydns.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/mydns.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winmydns.html内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=715内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=711内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=675内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'newslist.asp内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/zz1.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/thumbzz1.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/zz2.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/thumbzz2.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/zz3.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/thumbzz3.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/zz4.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/thumbzz4.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/ba1.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winiis.com/内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/ba2.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winiis.com/内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/ba3.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+start_urls ['http://winiis.com/']
+111: css/htmleaf-demo.css==>from: <200 http://winiis.com/>
+内链http://winiis.com/css/htmleaf-demo.css==>from: <200 http://winiis.com/>
+layer 2
+111: css/index.css==>from: <200 http://winiis.com/>
+内链http://winiis.com/css/index.css==>from: <200 http://winiis.com/>
+layer 3
+111: css/icon/iconfont.css==>from: <200 http://winiis.com/>
+内链http://winiis.com/css/icon/iconfont.css==>from: <200 http://winiis.com/>
+layer 4
+111: favicon.ico==>from: <200 http://winiis.com/>
+内链http://winiis.com/favicon.ico==>from: <200 http://winiis.com/>
+layer 5
+111: js/jquery.min.js==>from: <200 http://winiis.com/>
+内链http://winiis.com/js/jquery.min.js==>from: <200 http://winiis.com/>
+layer 6
+111: js/header.js==>from: <200 http://winiis.com/>
+内链http://winiis.com/js/header.js==>from: <200 http://winiis.com/>
+layer 7
+111: js/carousel.js==>from: <200 http://winiis.com/>
+内链http://winiis.com/js/carousel.js==>from: <200 http://winiis.com/>
+layer 8
+111: image/2_02.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/2_02.jpg==>from: <200 http://winiis.com/>
+layer 9
+111: winsafety.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winsafety.html==>from: <200 http://winiis.com/>
+layer 10
+111: ==>from: <200 http://winiis.com/>
+内链http://winiis.com/==>from: <200 http://winiis.com/>
+layer 11
+111: winiis.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winiis.html==>from: <200 http://winiis.com/>
+layer 12
+111: ==>from: <200 http://winiis.com/>
+内链http://winiis.com/==>from: <200 http://winiis.com/>
+layer 13
+111: wincdn.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/wincdn.html==>from: <200 http://winiis.com/>
+layer 14
+111: ==>from: <200 http://winiis.com/>
+内链http://winiis.com/==>from: <200 http://winiis.com/>
+layer 15
+111: winicp.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winicp.html==>from: <200 http://winiis.com/>
+layer 16
+111: ==>from: <200 http://winiis.com/>
+内链http://winiis.com/==>from: <200 http://winiis.com/>
+layer 17
+111: #myCarousel==>from: <200 http://winiis.com/>
+内链http://winiis.com/#myCarousel==>from: <200 http://winiis.com/>
+layer 18
+111: #myCarousel==>from: <200 http://winiis.com/>
+内链http://winiis.com/#myCarousel==>from: <200 http://winiis.com/>
+layer 19
+111: winsafety.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winsafety.html==>from: <200 http://winiis.com/>
+layer 20
+111: image/protect.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/protect.jpg==>from: <200 http://winiis.com/>
+layer 21
+111: winsafety.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winsafety.html==>from: <200 http://winiis.com/>
+layer 22
+111: winiis.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winiis.html==>from: <200 http://winiis.com/>
+layer 23
+111: image/lj.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/lj.jpg==>from: <200 http://winiis.com/>
+layer 24
+111: winiis.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winiis.html==>from: <200 http://winiis.com/>
+layer 25
+111: winig.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winig.html==>from: <200 http://winiis.com/>
+layer 26
+111: image/ig.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/ig.jpg==>from: <200 http://winiis.com/>
+layer 27
+111: winig.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winig.html==>from: <200 http://winiis.com/>
+layer 28
+111: winicp.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winicp.html==>from: <200 http://winiis.com/>
+layer 29
+111: image/icp.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/icp.jpg==>from: <200 http://winiis.com/>
+layer 30
+111: winicp.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winicp.html==>from: <200 http://winiis.com/>
+layer 31
+111: winisp.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winisp.html==>from: <200 http://winiis.com/>
+layer 32
+111: image/jr.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/jr.jpg==>from: <200 http://winiis.com/>
+layer 33
+111: winisp.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winisp.html==>from: <200 http://winiis.com/>
+layer 34
+111: wininternet.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/wininternet.html==>from: <200 http://winiis.com/>
+layer 35
+111: image/internet.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/internet.jpg==>from: <200 http://winiis.com/>
+layer 36
+111: wininternet.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/wininternet.html==>from: <200 http://winiis.com/>
+layer 37
+111: wincdn.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/wincdn.html==>from: <200 http://winiis.com/>
+layer 38
+111: image/cdn.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/cdn.jpg==>from: <200 http://winiis.com/>
+layer 39
+111: wincdn.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/wincdn.html==>from: <200 http://winiis.com/>
+layer 40
+111: winvirtualhost.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winvirtualhost.html==>from: <200 http://winiis.com/>
+layer 41
+111: image/virtural.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/virtural.jpg==>from: <200 http://winiis.com/>
+layer 42
+111: winvirtualhost.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winvirtualhost.html==>from: <200 http://winiis.com/>
+layer 43
+111: winmydns.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winmydns.html==>from: <200 http://winiis.com/>
+layer 44
+111: image/mydns.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/mydns.jpg==>from: <200 http://winiis.com/>
+layer 45
+111: winmydns.html==>from: <200 http://winiis.com/>
+内链http://winiis.com/winmydns.html==>from: <200 http://winiis.com/>
+layer 46
+111: news.asp?id=715==>from: <200 http://winiis.com/>
+内链http://winiis.com/news.asp?id=715==>from: <200 http://winiis.com/>
+layer 47
+111: news.asp?id=711==>from: <200 http://winiis.com/>
+内链http://winiis.com/news.asp?id=711==>from: <200 http://winiis.com/>
+layer 48
+111: news.asp?id=675==>from: <200 http://winiis.com/>
+内链http://winiis.com/news.asp?id=675==>from: <200 http://winiis.com/>
+layer 49
+111: newslist.asp==>from: <200 http://winiis.com/>
+内链http://winiis.com/newslist.asp==>from: <200 http://winiis.com/>
+layer 50
+111: image/zz1.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/zz1.jpg==>from: <200 http://winiis.com/>
+layer 51
+111: image/thumbzz1.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/thumbzz1.jpg==>from: <200 http://winiis.com/>
+layer 52
+111: image/zz2.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/zz2.jpg==>from: <200 http://winiis.com/>
+layer 53
+111: image/thumbzz2.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/thumbzz2.jpg==>from: <200 http://winiis.com/>
+layer 54
+111: image/zz3.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/zz3.jpg==>from: <200 http://winiis.com/>
+layer 55
+111: image/thumbzz3.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/thumbzz3.jpg==>from: <200 http://winiis.com/>
+layer 56
+111: image/zz4.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/zz4.jpg==>from: <200 http://winiis.com/>
+layer 57
+111: image/thumbzz4.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/thumbzz4.jpg==>from: <200 http://winiis.com/>
+layer 58
+111: image/ba1.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/ba1.jpg==>from: <200 http://winiis.com/>
+layer 59
+111: ==>from: <200 http://winiis.com/>
+内链http://winiis.com/==>from: <200 http://winiis.com/>
+layer 60
+111: image/ba2.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/ba2.jpg==>from: <200 http://winiis.com/>
+layer 61
+111: ==>from: <200 http://winiis.com/>
+内链http://winiis.com/==>from: <200 http://winiis.com/>
+layer 62
+111: image/ba3.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/ba3.jpg==>from: <200 http://winiis.com/>
+layer 63
+111: ==>from: <200 http://winiis.com/>
+内链http://winiis.com/==>from: <200 http://winiis.com/>2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winiis.com/内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/zz5.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winiis.com/内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winiis.com/内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/zz7.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winiis.com/内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/zz8.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winiis.com/内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': '#myCarousel2内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': '#myCarousel2内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/22_03.jpg内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/consult.js内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/carousel.css内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/index.js内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/footer.js内链<200 http://winiis.com/>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:24 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET http://winiis.com/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-10-16 16:07:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/favicon.ico> (referer: http://winiis.com/)
+2018-10-16 16:07:26 [scrapy.core.scraper] ERROR: Spider error processing <GET http://winiis.com/favicon.ico> (referer: http://winiis.com/)
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/www/scrapy20180929/cnblogSpider/cnblogSpider/spiders/cnblogs_com.py", line 25, in parse
+    all_link = response.xpath("//*//@src | //*//@href | //*//@url |  //*//@ocde" ).extract() #页面内的所有链接
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/http/response/__init__.py", line 105, in xpath
+    raise NotSupported("Response content isn't text")
+scrapy.exceptions.NotSupported: Response content isn't text
+2018-10-16 16:07:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/image/zz8.jpg> (referer: http://winiis.com/)
+2018-10-16 16:07:28 [scrapy.core.scraper] ERROR: Spider error processing <GET http://winiis.com/image/zz8.jpg> (referer: http://winiis.com/)
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/www/scrapy20180929/cnblogSpider/cnblogSpider/spiders/cnblogs_com.py", line 25, in parse
+    all_link = response.xpath("//*//@src | //*//@href | //*//@url |  //*//@ocde" ).extract() #页面内的所有链接
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/http/response/__init__.py", line 105, in xpath
+    raise NotSupported("Response content isn't text")
+scrapy.exceptions.NotSupported: Response content isn't text
+2018-10-16 16:07:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/css/index.css> (referer: http://winiis.com/)
+2018-10-16 16:07:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/image/icp.jpg> (referer: http://winiis.com/)
+2018-10-16 16:07:34 [scrapy.core.scraper] ERROR: Spider error processing <GET http://winiis.com/image/icp.jpg> (referer: http://winiis.com/)
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/www/scrapy20180929/cnblogSpider/cnblogSpider/spiders/cnblogs_com.py", line 25, in parse
+    all_link = response.xpath("//*//@src | //*//@href | //*//@url |  //*//@ocde" ).extract() #页面内的所有链接
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/http/response/__init__.py", line 105, in xpath
+    raise NotSupported("Response content isn't text")
+scrapy.exceptions.NotSupported: Response content isn't text
+2018-10-16 16:07:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/winvirtualhost.html> (referer: http://winiis.com/)
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/htmleaf-demo.css内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/index.css内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/icon/iconfont.css内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/jquery.min.js内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/header.js内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/consult.js内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/leftmenu.js内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'favicon.ico内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'about.html内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/headimg.jpg内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://www7.winiis.com<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://www7.winiis.com<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://www72.winiis.com<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://www72.winiis.com<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://www73.winiis.com<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://www73.winiis.com<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://www74.winiis.com<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://www74.winiis.com<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/footer.js内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winvirtualhost.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/baidu.js内链<200 http://winiis.com/winvirtualhost.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/newslist.asp> (referer: http://winiis.com/)
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/htmleaf-demo.css内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/style.css内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+
+layer 64
+111: image/zz5.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/zz5.jpg==>from: <200 http://winiis.com/>
+layer 65
+111: ==>from: <200 http://winiis.com/>
+内链http://winiis.com/==>from: <200 http://winiis.com/>
+layer 66
+111: ==>from: <200 http://winiis.com/>
+内链http://winiis.com/==>from: <200 http://winiis.com/>
+layer 67
+111: image/zz7.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/zz7.jpg==>from: <200 http://winiis.com/>
+layer 68
+111: ==>from: <200 http://winiis.com/>
+内链http://winiis.com/==>from: <200 http://winiis.com/>
+layer 69
+111: image/zz8.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/zz8.jpg==>from: <200 http://winiis.com/>
+layer 70
+111: ==>from: <200 http://winiis.com/>
+内链http://winiis.com/==>from: <200 http://winiis.com/>
+layer 71
+111: #myCarousel2==>from: <200 http://winiis.com/>
+内链http://winiis.com/#myCarousel2==>from: <200 http://winiis.com/>
+layer 72
+111: #myCarousel2==>from: <200 http://winiis.com/>
+内链http://winiis.com/#myCarousel2==>from: <200 http://winiis.com/>
+layer 73
+111: image/22_03.jpg==>from: <200 http://winiis.com/>
+内链http://winiis.com/image/22_03.jpg==>from: <200 http://winiis.com/>
+layer 74
+111: js/consult.js==>from: <200 http://winiis.com/>
+内链http://winiis.com/js/consult.js==>from: <200 http://winiis.com/>
+layer 75
+111: css/carousel.css==>from: <200 http://winiis.com/>
+内链http://winiis.com/css/carousel.css==>from: <200 http://winiis.com/>
+layer 76
+111: js/index.js==>from: <200 http://winiis.com/>
+内链http://winiis.com/js/index.js==>from: <200 http://winiis.com/>
+layer 77
+111: js/footer.js==>from: <200 http://winiis.com/>
+内链http://winiis.com/js/footer.js==>from: <200 http://winiis.com/>
+layer 78
+all_urls:{'', 'winicp.html', 'winig.html', 'wincdn.html', 'js/carousel.js', 'image/zz4.jpg', 'image/ig.jpg', 'winisp.html', 'image/thumbzz1.jpg', 'css/index.css', 'image/2_02.jpg', 'image/zz3.jpg', 'news.asp?id=711', 'image/22_03.jpg', 'js/footer.js', 'image/internet.jpg', 'winsafety.html', 'css/htmleaf-demo.css', 'image/ba3.jpg', 'news.asp?id=675', 'winiis.html', 'js/consult.js', '#myCarousel2', 'css/carousel.css', 'image/thumbzz2.jpg', 'winvirtualhost.html', 'image/jr.jpg', 'image/zz5.jpg', 'image/zz8.jpg', 'image/icp.jpg', 'winmydns.html', 'image/zz2.jpg', 'image/zz7.jpg', 'css/icon/iconfont.css', 'favicon.ico', 'image/thumbzz3.jpg', 'image/ba2.jpg', 'news.asp?id=715', 'image/cdn.jpg', 'js/index.js', 'image/ba1.jpg', 'image/lj.jpg', '#myCarousel', 'wininternet.html', 'image/mydns.jpg', 'image/protect.jpg', 'js/header.js', 'image/thumbzz4.jpg', 'newslist.asp', 'image/zz1.jpg', 'image/virtural.jpg', 'js/jquery.min.js'}
+0000:http://winiis.com/favicon.ico
+0000:http://winiis.com/image/zz8.jpg
+0000:http://winiis.com/css/index.css
+0000:http://winiis.com/image/icp.jpg
+0000:http://winiis.com/winvirtualhost.html
+0000:http://winiis.com/newslist.asp
+0000:http://winiis.com/image/ig.jpg
+0000:http://winiis.com/wincdn.html
+0000:http://winiis.com/winisp.html
+0000:http://winiis.com/css/carousel.css
+0000:http://winiis.com/image/virtural.jpg
+0000:http://winiis.com/winig.html
+0000:http://winiis.com/image/ba3.jpg
+0000:http://winiis.com/image/ba1.jpg
+0000:http://winiis.com/js/header.js
+0000:http://winiis.com/winmydns.html
+0000:http://winiis.com/js/index.js
+0000:http://winiis.com/winsafety.html
+0000:http://winiis.com/js/jquery.min.js
+0000:http://winiis.com/image/zz3.jpg
+0000:http://winiis.com/css/icon/iconfont.css
+0000:http://winiis.com/image/thumbzz4.jpg
+0000:http://winiis.com/js/consult.js
+0000:http://winiis.com/js/carousel.js
+0000:http://winiis.com/js/footer.js
+0000:http://winiis.com/image/protect.jpg
+0000:http://winiis.com/image/ba2.jpg
+0000:http://winiis.com/css/htmleaf-demo.css
+0000:http://winiis.com/image/cdn.jpg
+0000:http://winiis.com/image/zz7.jpg
+0000:http://winiis.com/image/lj.jpg
+0000:http://winiis.com/image/2_02.jpg
+0000:http://winiis.com/image/mydns.jpg
+0000:http://winiis.com/image/thumbzz2.jpg
+0000:http://winiis.com/winicp.html
+0000:http://winiis.com/#myCarousel2
+0000:http://winiis.com/wininternet.html
+0000:http://winiis.com/
+0000:http://winiis.com/winiis.html
+0000:http://winiis.com/image/zz2.jpg
+0000:http://winiis.com/image/zz5.jpg
+0000:http://winiis.com/image/thumbzz1.jpg
+0000:http://winiis.com/news.asp?id=715
+0000:http://winiis.com/image/zz4.jpg
+0000:http://winiis.com/image/internet.jpg
+0000:http://winiis.com/image/jr.jpg
+0000:http://winiis.com/news.asp?id=711
+0000:http://winiis.com/image/thumbzz3.jpg
+0000:http://winiis.com/news.asp?id=675
+0000:http://winiis.com/image/22_03.jpg
+0000:http://winiis.com/#myCarousel
+0000:http://winiis.com/image/zz1.jpg
+start_urls ['http://winiis.com/']
+start_urls ['http://winiis.com/']
+start_urls ['http://winiis.com/']
+all_urls:set()
+start_urls ['http://winiis.com/']
+start_urls ['http://winiis.com/']
+111: css/htmleaf-demo.css==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/css/htmleaf-demo.css==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 79
+111: css/index.css==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/css/index.css==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 80
+111: css/icon/iconfont.css==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/css/icon/iconfont.css==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 81
+111: js/jquery.min.js==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/js/jquery.min.js==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 82
+111: js/header.js==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/js/header.js==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 83
+111: js/consult.js==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/js/consult.js==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 84
+111: js/leftmenu.js==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/js/leftmenu.js==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 85
+111: favicon.ico==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/favicon.ico==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 86
+111: about.html==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/about.html==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 87
+111: image/headimg.jpg==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/image/headimg.jpg==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 88
+外链http://www7.winiis.com==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 89
+外链http://www72.winiis.com==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 90
+外链http://www73.winiis.com==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 91
+外链http://www74.winiis.com==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 92
+111: js/footer.js==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/js/footer.js==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 93
+111: js/baidu.js==>from: <200 http://winiis.com/winvirtualhost.html>
+内链http://winiis.com/js/baidu.js==>from: <200 http://winiis.com/winvirtualhost.html>
+layer 94
+all_urls:{'http://www73.winiis.com', 'js/footer.js', 'http://www7.winiis.com', 'js/leftmenu.js', 'css/htmleaf-demo.css', 'image/headimg.jpg', 'js/header.js', 'css/index.css', 'css/icon/iconfont.css', 'js/consult.js', 'about.html', 'favicon.ico', 'http://www72.winiis.com', 'http://www74.winiis.com', 'js/baidu.js', 'js/jquery.min.js'}
+0000:http://winiis.com/about.html
+0000:http://winiis.com/js/leftmenu.js
+0000:http://winiis.com/js/baidu.js
+0000:http://winiis.com/image/headimg.jpg
+start_urls ['http://winiis.com/']
+111: css/htmleaf-demo.css==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/css/htmleaf-demo.css==>from: <200 http://winiis.com/newslist.asp>
+layer 95
+111: css/style.css==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/css/style.css==>from: <200 http://winiis.com/newslist.asp>
+layer 96
+111: css/index.css==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/css/index.css==>from: <200 http://winiis.com/newslist.asp>2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/index.css内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/icon/iconfont.css内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/ft-carousel.css内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/jquery.min.js内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/header.js内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/consult.js内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'favicon.ico内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=715内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=649内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=711内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=672内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=677内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=675内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=674内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=665内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=646内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=645内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=641内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=640内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=639内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=650内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=651内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=632内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=630内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=620内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=621内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=617内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=616内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=579内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=571内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=568内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=564内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=551内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=554内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=544内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=537内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=534内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=535内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'news.asp?id=536内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/footer.js内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/newslist.asp>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/baidu.js内链<200 http://winiis.com/newslist.asp>',
+ 'start_link': 'http://winiis.com/'}
+
+layer 97
+111: css/icon/iconfont.css==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/css/icon/iconfont.css==>from: <200 http://winiis.com/newslist.asp>
+layer 98
+111: css/ft-carousel.css==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/css/ft-carousel.css==>from: <200 http://winiis.com/newslist.asp>
+layer 99
+111: js/jquery.min.js==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/js/jquery.min.js==>from: <200 http://winiis.com/newslist.asp>
+layer 100
+111: js/header.js==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/js/header.js==>from: <200 http://winiis.com/newslist.asp>
+layer 101
+111: js/consult.js==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/js/consult.js==>from: <200 http://winiis.com/newslist.asp>
+layer 102
+111: favicon.ico==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/favicon.ico==>from: <200 http://winiis.com/newslist.asp>
+layer 103
+111: news.asp?id=715==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=715==>from: <200 http://winiis.com/newslist.asp>
+layer 104
+111: news.asp?id=649==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=649==>from: <200 http://winiis.com/newslist.asp>
+layer 105
+111: news.asp?id=711==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=711==>from: <200 http://winiis.com/newslist.asp>
+layer 106
+111: news.asp?id=672==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=672==>from: <200 http://winiis.com/newslist.asp>
+layer 107
+111: news.asp?id=677==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=677==>from: <200 http://winiis.com/newslist.asp>
+layer 108
+111: news.asp?id=675==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=675==>from: <200 http://winiis.com/newslist.asp>
+layer 109
+111: news.asp?id=674==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=674==>from: <200 http://winiis.com/newslist.asp>
+layer 110
+111: news.asp?id=665==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=665==>from: <200 http://winiis.com/newslist.asp>
+layer 111
+111: news.asp?id=646==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=646==>from: <200 http://winiis.com/newslist.asp>
+layer 112
+111: news.asp?id=645==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=645==>from: <200 http://winiis.com/newslist.asp>
+layer 113
+111: news.asp?id=641==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=641==>from: <200 http://winiis.com/newslist.asp>
+layer 114
+111: news.asp?id=640==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=640==>from: <200 http://winiis.com/newslist.asp>
+layer 115
+111: news.asp?id=639==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=639==>from: <200 http://winiis.com/newslist.asp>
+layer 116
+111: news.asp?id=650==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=650==>from: <200 http://winiis.com/newslist.asp>
+layer 117
+111: news.asp?id=651==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=651==>from: <200 http://winiis.com/newslist.asp>
+layer 118
+111: news.asp?id=632==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=632==>from: <200 http://winiis.com/newslist.asp>
+layer 119
+111: news.asp?id=630==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=630==>from: <200 http://winiis.com/newslist.asp>
+layer 120
+111: news.asp?id=620==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=620==>from: <200 http://winiis.com/newslist.asp>
+layer 121
+111: news.asp?id=621==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=621==>from: <200 http://winiis.com/newslist.asp>
+layer 122
+111: news.asp?id=617==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=617==>from: <200 http://winiis.com/newslist.asp>
+layer 123
+111: news.asp?id=616==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=616==>from: <200 http://winiis.com/newslist.asp>
+layer 124
+111: news.asp?id=579==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=579==>from: <200 http://winiis.com/newslist.asp>
+layer 125
+111: news.asp?id=571==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=571==>from: <200 http://winiis.com/newslist.asp>
+layer 126
+111: news.asp?id=568==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=568==>from: <200 http://winiis.com/newslist.asp>
+layer 127
+111: news.asp?id=564==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=564==>from: <200 http://winiis.com/newslist.asp>
+layer 128
+111: news.asp?id=551==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=551==>from: <200 http://winiis.com/newslist.asp>
+layer 129
+111: news.asp?id=554==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=554==>from: <200 http://winiis.com/newslist.asp>
+layer 130
+111: news.asp?id=544==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=544==>from: <200 http://winiis.com/newslist.asp>
+layer 131
+111: news.asp?id=537==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=537==>from: <200 http://winiis.com/newslist.asp>
+layer 132
+111: news.asp?id=534==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=534==>from: <200 http://winiis.com/newslist.asp>
+layer 133
+111: news.asp?id=535==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=535==>from: <200 http://winiis.com/newslist.asp>
+layer 134
+111: news.asp?id=536==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/news.asp?id=536==>from: <200 http://winiis.com/newslist.asp>
+layer 135
+111: js/footer.js==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/js/footer.js==>from: <200 http://winiis.com/newslist.asp>
+layer 136
+111: js/baidu.js==>from: <200 http://winiis.com/newslist.asp>
+内链http://winiis.com/js/baidu.js==>from: <200 http://winiis.com/newslist.asp>
+layer 137
+all_urls:{'news.asp?id=645', 'css/index.css', 'news.asp?id=651', 'news.asp?id=711', 'news.asp?id=672', 'news.asp?id=674', 'css/ft-carousel.css', 'news.asp?id=616', 'news.asp?id=568', 'news.asp?id=544', 'js/footer.js', 'news.asp?id=640', 'css/htmleaf-demo.css', 'news.asp?id=675', 'js/consult.js', 'news.asp?id=579', 'news.asp?id=536', 'news.asp?id=621', 'css/style.css', 'news.asp?id=665', 'news.asp?id=617', 'news.asp?id=650', 'news.asp?id=554', 'news.asp?id=649', 'news.asp?id=620', 'news.asp?id=639', 'news.asp?id=571', 'css/icon/iconfont.css', 'news.asp?id=646', 'favicon.ico', 'news.asp?id=630', 'news.asp?id=715', 'news.asp?id=551', 'news.asp?id=641', 'news.asp?id=535', 'news.asp?id=632', 'js/header.js', 'news.asp?id=677', 'news.asp?id=537', 'news.asp?id=534', 'news.asp?id=564', 'js/baidu.js', 'js/jquery.min.js'}
+0000:http://winiis.com/news.asp?id=551
+0000:http://winiis.com/news.asp?id=620
+0000:http://winiis.com/css/ft-carousel.css
+0000:http://winiis.com/news.asp?id=537
+0000:http://winiis.com/news.asp?id=544
+0000:http://winiis.com/news.asp?id=579
+0000:http://winiis.com/news.asp?id=651
+0000:http://winiis.com/news.asp?id=621
+0000:http://winiis.com/news.asp?id=645
+0000:http://winiis.com/news.asp?id=617
+0000:http://winiis.com/news.asp?id=630
+0000:http://winiis.com/news.asp?id=534
+0000:http://winiis.com/news.asp?id=554
+0000:http://winiis.com/news.asp?id=665
+0000:http://winiis.com/news.asp?id=640
+0000:http://winiis.com/news.asp?id=536
+0000:http://winiis.com/news.asp?id=674
+0000:http://winiis.com/news.asp?id=535
+0000:http://winiis.com/news.asp?id=564
+0000:http://winiis.com/news.asp?id=677
+0000:http://winiis.com/css/style.css
+0000:http://winiis.com/news.asp?id=639
+0000:http://winiis.com/news.asp?id=650
+0000:http://winiis.com/news.asp?id=6162018-10-16 16:07:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/image/ig.jpg> (referer: http://winiis.com/)
+2018-10-16 16:07:42 [scrapy.core.scraper] ERROR: Spider error processing <GET http://winiis.com/image/ig.jpg> (referer: http://winiis.com/)
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/www/scrapy20180929/cnblogSpider/cnblogSpider/spiders/cnblogs_com.py", line 25, in parse
+    all_link = response.xpath("//*//@src | //*//@href | //*//@url |  //*//@ocde" ).extract() #页面内的所有链接
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/http/response/__init__.py", line 105, in xpath
+    raise NotSupported("Response content isn't text")
+scrapy.exceptions.NotSupported: Response content isn't text
+2018-10-16 16:07:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/wincdn.html> (referer: http://winiis.com/)
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/htmleaf-demo.css内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/index.css内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/icon/iconfont.css内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/jquery.min.js内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/header.js内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/consult.js内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/leftmenu.js内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'favicon.ico内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'about.html内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/headimg.jpg内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://cdn.winiis.net:8050/<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://cdn.winiis.net:8050/<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/cdngn.jpg内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/cdnzc.png内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/footer.js内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/wincdn.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/baidu.js内链<200 http://winiis.com/wincdn.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/winisp.html> (referer: http://winiis.com/)
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/htmleaf-demo.css内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/index.css内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/icon/iconfont.css内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/jquery.min.js内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/header.js内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/consult.js内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/leftmenu.js内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'favicon.ico内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'about.html内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/headimg.jpg内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winisp.h001.winiis.com/<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winisp.h001.winiis.com/<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': '/winidcisp.html内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/footer.js内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:47 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winisp.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/baidu.js内链<200 http://winiis.com/winisp.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/css/carousel.css> (referer: http://winiis.com/)
+2018-10-16 16:07:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/image/virtural.jpg> (referer: http://winiis.com/)
+2018-10-16 16:07:51 [scrapy.core.scraper] ERROR: Spider error processing <GET http://winiis.com/image/virtural.jpg> (referer: http://winiis.com/)
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/www/scrapy20180929/cnblogSpider/cnblogSpider/spiders/cnblogs_com.py", line 25, in parse
+    all_link = response.xpath("//*//@src | //*//@href | //*//@url |  //*//@ocde" ).extract() #页面内的所有链接
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/http/response/__init__.py", line 105, in xpath
+    raise NotSupported("Response content isn't text")
+scrapy.exceptions.NotSupported: Response content isn't text
+2018-10-16 16:07:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/winig.html> (referer: http://winiis.com/)
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/htmleaf-demo.css内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/index.css内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/icon/iconfont.css内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/jquery.min.js内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/header.js内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/consult.js内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/leftmenu.js内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': '/favicon.ico内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'about.html内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/headimg.jpg内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://222.77.182.245:8080<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://222.77.182.245:8080<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/yuanli.png内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/footer.js内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:54 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winig.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/baidu.js内链<200 http://winiis.com/winig.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:07:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/image/ba3.jpg> (referer: http://winiis.com/)
+2018-10-16 16:07:56 [scrapy.core.scraper] ERROR: Spider error processing <GET http://winiis.com/image/ba3.jpg> (referer: http://winiis.com/)
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/www/scrapy20180929/cnblogSpider/cnblogSpider/spiders/cnblogs_com.py", line 25, in parse
+    all_link = response.xpath("//*//@src | //*//@href | //*//@url |  //*//@ocde" ).extract() #页面内的所有链接
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/http/response/__init__.py", line 105, in xpath
+    raise NotSupported("Response content isn't text")
+scrapy.exceptions.NotSupported: Response content isn't text
+2018-10-16 16:07:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/image/ba1.jpg> (referer: http://winiis.com/)
+2018-10-16 16:07:58 [scrapy.core.scraper] ERROR: Spider error processing <GET http://winiis.com/image/ba1.jpg> (referer: http://winiis.com/)
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/www/scrapy20180929/cnblogSpider/cnblogSpider/spiders/cnblogs_com.py", line 25, in parse
+    all_link = response.xpath("//*//@src | //*//@href | //*//@url |  //*//@ocde" ).extract() #页面内的所有链接
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/http/response/__init__.py", line 105, in xpath
+    raise NotSupported("Response content isn't text")
+scrapy.exceptions.NotSupported: Response content isn't text
+2018-10-16 16:08:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/js/header.js> (referer: http://winiis.com/)
+
+0000:http://winiis.com/news.asp?id=571
+0000:http://winiis.com/news.asp?id=646
+0000:http://winiis.com/news.asp?id=672
+0000:http://winiis.com/news.asp?id=641
+0000:http://winiis.com/news.asp?id=649
+0000:http://winiis.com/news.asp?id=632
+0000:http://winiis.com/news.asp?id=568
+start_urls ['http://winiis.com/']
+start_urls ['http://winiis.com/']
+111: css/htmleaf-demo.css==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/css/htmleaf-demo.css==>from: <200 http://winiis.com/wincdn.html>
+layer 138
+111: css/index.css==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/css/index.css==>from: <200 http://winiis.com/wincdn.html>
+layer 139
+111: css/icon/iconfont.css==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/css/icon/iconfont.css==>from: <200 http://winiis.com/wincdn.html>
+layer 140
+111: js/jquery.min.js==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/js/jquery.min.js==>from: <200 http://winiis.com/wincdn.html>
+layer 141
+111: js/header.js==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/js/header.js==>from: <200 http://winiis.com/wincdn.html>
+layer 142
+111: js/consult.js==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/js/consult.js==>from: <200 http://winiis.com/wincdn.html>
+layer 143
+111: js/leftmenu.js==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/js/leftmenu.js==>from: <200 http://winiis.com/wincdn.html>
+layer 144
+111: favicon.ico==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/favicon.ico==>from: <200 http://winiis.com/wincdn.html>
+layer 145
+111: about.html==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/about.html==>from: <200 http://winiis.com/wincdn.html>
+layer 146
+111: image/headimg.jpg==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/image/headimg.jpg==>from: <200 http://winiis.com/wincdn.html>
+layer 147
+外链http://cdn.winiis.net:8050/==>from: <200 http://winiis.com/wincdn.html>
+layer 148
+111: image/cdngn.jpg==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/image/cdngn.jpg==>from: <200 http://winiis.com/wincdn.html>
+layer 149
+111: image/cdnzc.png==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/image/cdnzc.png==>from: <200 http://winiis.com/wincdn.html>
+layer 150
+111: js/footer.js==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/js/footer.js==>from: <200 http://winiis.com/wincdn.html>
+layer 151
+111: js/baidu.js==>from: <200 http://winiis.com/wincdn.html>
+内链http://winiis.com/js/baidu.js==>from: <200 http://winiis.com/wincdn.html>
+layer 152
+all_urls:{'js/footer.js', 'http://cdn.winiis.net:8050/', 'js/leftmenu.js', 'image/cdngn.jpg', 'css/htmleaf-demo.css', 'image/headimg.jpg', 'js/header.js', 'css/index.css', 'css/icon/iconfont.css', 'js/consult.js', 'about.html', 'favicon.ico', 'image/cdnzc.png', 'js/baidu.js', 'js/jquery.min.js'}
+0000:http://winiis.com/image/cdngn.jpg
+0000:http://winiis.com/image/cdnzc.png
+start_urls ['http://winiis.com/']
+111: css/htmleaf-demo.css==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/css/htmleaf-demo.css==>from: <200 http://winiis.com/winisp.html>
+layer 153
+111: css/index.css==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/css/index.css==>from: <200 http://winiis.com/winisp.html>
+layer 154
+111: css/icon/iconfont.css==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/css/icon/iconfont.css==>from: <200 http://winiis.com/winisp.html>
+layer 155
+111: js/jquery.min.js==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/js/jquery.min.js==>from: <200 http://winiis.com/winisp.html>
+layer 156
+111: js/header.js==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/js/header.js==>from: <200 http://winiis.com/winisp.html>
+layer 157
+111: js/consult.js==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/js/consult.js==>from: <200 http://winiis.com/winisp.html>
+layer 158
+111: js/leftmenu.js==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/js/leftmenu.js==>from: <200 http://winiis.com/winisp.html>
+layer 159
+111: favicon.ico==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/favicon.ico==>from: <200 http://winiis.com/winisp.html>
+layer 160
+111: about.html==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/about.html==>from: <200 http://winiis.com/winisp.html>
+layer 161
+111: image/headimg.jpg==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/image/headimg.jpg==>from: <200 http://winiis.com/winisp.html>
+layer 162
+外链http://winisp.h001.winiis.com/==>from: <200 http://winiis.com/winisp.html>
+layer 163
+111: /winidcisp.html==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/winidcisp.html==>from: <200 http://winiis.com/winisp.html>
+layer 164
+111: js/footer.js==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/js/footer.js==>from: <200 http://winiis.com/winisp.html>
+layer 165
+111: js/baidu.js==>from: <200 http://winiis.com/winisp.html>
+内链http://winiis.com/js/baidu.js==>from: <200 http://winiis.com/winisp.html>
+layer 166
+all_urls:{'js/footer.js', 'js/leftmenu.js', 'css/htmleaf-demo.css', 'image/headimg.jpg', 'js/header.js', 'css/index.css', 'css/icon/iconfont.css', 'js/consult.js', 'about.html', 'favicon.ico', 'js/baidu.js', '/winidcisp.html', 'http://winisp.h001.winiis.com/', 'js/jquery.min.js'}
+0000:http://winiis.com/winidcisp.html
+start_urls ['http://winiis.com/']
+all_urls:set()
+start_urls ['http://winiis.com/']
+start_urls ['http://winiis.com/']
+111: css/htmleaf-demo.css==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/css/htmleaf-demo.css==>from: <200 http://winiis.com/winig.html>
+layer 167
+111: css/index.css==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/css/index.css==>from: <200 http://winiis.com/winig.html>
+layer 168
+111: css/icon/iconfont.css==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/css/icon/iconfont.css==>from: <200 http://winiis.com/winig.html>
+layer 169
+111: js/jquery.min.js==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/js/jquery.min.js==>from: <200 http://winiis.com/winig.html>
+layer 170
+111: js/header.js==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/js/header.js==>from: <200 http://winiis.com/winig.html>
+layer 171
+111: js/consult.js==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/js/consult.js==>from: <200 http://winiis.com/winig.html>
+layer 172
+111: js/leftmenu.js==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/js/leftmenu.js==>from: <200 http://winiis.com/winig.html>
+layer 173
+111: /favicon.ico==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/favicon.ico==>from: <200 http://winiis.com/winig.html>
+layer 174
+111: about.html==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/about.html==>from: <200 http://winiis.com/winig.html>
+layer 175
+111: image/headimg.jpg==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/image/headimg.jpg==>from: <200 http://winiis.com/winig.html>
+layer 176
+外链http://222.77.182.245:8080==>from: <200 http://winiis.com/winig.html>
+layer 177
+111: image/yuanli.png==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/image/yuanli.png==>from: <200 http://winiis.com/winig.html>
+layer 178
+111: js/footer.js==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/js/footer.js==>from: <200 http://winiis.com/winig.html>
+layer 179
+111: js/baidu.js==>from: <200 http://winiis.com/winig.html>
+内链http://winiis.com/js/baidu.js==>from: <200 http://winiis.com/winig.html>
+layer 180
+all_urls:{'js/footer.js', 'js/leftmenu.js', '/favicon.ico', 'http://222.77.182.245:8080', 'css/htmleaf-demo.css', 'image/headimg.jpg', 'js/header.js', 'css/index.css', 'css/icon/iconfont.css', 'js/consult.js', 'about.html', 'js/baidu.js', 'image/yuanli.png', 'js/jquery.min.js'}
+0000:http://winiis.com/image/yuanli.png
+start_urls ['http://winiis.com/']
+start_urls ['http://winiis.com/']
+start_urls ['http://winiis.com/']
+111: image/headlogo_03.jpg==>from: <200 http://winiis.com/js/header.js>2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/headlogo_03.jpg内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'index.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winsafety.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winsafety.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winiis.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winig.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winicp.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winisp.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'wininternet.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'wincdn.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winvirtualhost.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winmydns.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'fkfs.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'contact.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'about.html内链<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://support.winiis.com/<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://support.winiis.com/<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://support.winiis.com/<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://support.winiis.com/<200 http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://support.winiis.com/#/register<200 '
+         'http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:01 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/header.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://support.winiis.com/#/register<200 '
+         'http://winiis.com/js/header.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/winmydns.html> (referer: http://winiis.com/)
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/htmleaf-demo.css内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/index.css内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/icon/iconfont.css内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/jquery.min.js内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/header.js内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/leftmenu.js内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'favicon.ico内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/consult.js内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'about.html内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/headimg.jpg内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winmydns.winiis.com/<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://winmydns.winiis.com/<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://www.winiis.com/download/WinMyDNS_V1.70.rar<200 '
+         'http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://www.winiis.com/download/WinMyDNS_V1.70.rar<200 '
+         'http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/footer.js内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winmydns.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/baidu.js内链<200 http://winiis.com/winmydns.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/js/index.js> (referer: http://winiis.com/)
+2018-10-16 16:08:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/winsafety.html> (referer: http://winiis.com/)
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/htmleaf-demo.css内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/index.css内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'css/icon/iconfont.css内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/jquery.min.js内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/header.js内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/consult.js内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/leftmenu.js内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'favicon.ico内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'about.html内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/headimg.jpg内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://fz.winiis.net:8011/<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://fz.winiis.net:8011/<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'winidcisp.html内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/footer.js内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/winsafety.html>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'js/baidu.js内链<200 http://winiis.com/winsafety.html>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/js/jquery.min.js> (referer: http://winiis.com/)
+
+内链http://winiis.com/image/headlogo_03.jpg==>from: <200 http://winiis.com/js/header.js>
+layer 181
+111: index.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/index.html==>from: <200 http://winiis.com/js/header.js>
+layer 182
+111: winsafety.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/winsafety.html==>from: <200 http://winiis.com/js/header.js>
+layer 183
+111: winsafety.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/winsafety.html==>from: <200 http://winiis.com/js/header.js>
+layer 184
+111: winiis.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/winiis.html==>from: <200 http://winiis.com/js/header.js>
+layer 185
+111: winig.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/winig.html==>from: <200 http://winiis.com/js/header.js>
+layer 186
+111: winicp.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/winicp.html==>from: <200 http://winiis.com/js/header.js>
+layer 187
+111: winisp.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/winisp.html==>from: <200 http://winiis.com/js/header.js>
+layer 188
+111: wininternet.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/wininternet.html==>from: <200 http://winiis.com/js/header.js>
+layer 189
+111: wincdn.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/wincdn.html==>from: <200 http://winiis.com/js/header.js>
+layer 190
+111: winvirtualhost.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/winvirtualhost.html==>from: <200 http://winiis.com/js/header.js>
+layer 191
+111: winmydns.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/winmydns.html==>from: <200 http://winiis.com/js/header.js>
+layer 192
+111: fkfs.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/fkfs.html==>from: <200 http://winiis.com/js/header.js>
+layer 193
+111: contact.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/contact.html==>from: <200 http://winiis.com/js/header.js>
+layer 194
+111: about.html==>from: <200 http://winiis.com/js/header.js>
+内链http://winiis.com/about.html==>from: <200 http://winiis.com/js/header.js>
+layer 195
+外链http://support.winiis.com/==>from: <200 http://winiis.com/js/header.js>
+layer 196
+外链http://support.winiis.com/==>from: <200 http://winiis.com/js/header.js>
+layer 197
+外链http://support.winiis.com/#/register==>from: <200 http://winiis.com/js/header.js>
+layer 198
+all_urls:{'image/headlogo_03.jpg', 'winig.html', 'winicp.html', 'wininternet.html', 'winsafety.html', 'index.html', 'wincdn.html', 'winvirtualhost.html', 'http://support.winiis.com/', 'winmydns.html', 'winisp.html', 'winiis.html', 'http://support.winiis.com/#/register', 'about.html', 'fkfs.html', 'contact.html'}
+0000:http://winiis.com/fkfs.html
+0000:http://winiis.com/contact.html
+0000:http://winiis.com/index.html
+0000:http://winiis.com/image/headlogo_03.jpg
+start_urls ['http://winiis.com/']
+111: css/htmleaf-demo.css==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/css/htmleaf-demo.css==>from: <200 http://winiis.com/winmydns.html>
+layer 199
+111: css/index.css==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/css/index.css==>from: <200 http://winiis.com/winmydns.html>
+layer 200
+111: css/icon/iconfont.css==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/css/icon/iconfont.css==>from: <200 http://winiis.com/winmydns.html>
+layer 201
+111: js/jquery.min.js==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/js/jquery.min.js==>from: <200 http://winiis.com/winmydns.html>
+layer 202
+111: js/header.js==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/js/header.js==>from: <200 http://winiis.com/winmydns.html>
+layer 203
+111: js/leftmenu.js==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/js/leftmenu.js==>from: <200 http://winiis.com/winmydns.html>
+layer 204
+111: favicon.ico==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/favicon.ico==>from: <200 http://winiis.com/winmydns.html>
+layer 205
+111: js/consult.js==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/js/consult.js==>from: <200 http://winiis.com/winmydns.html>
+layer 206
+111: about.html==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/about.html==>from: <200 http://winiis.com/winmydns.html>
+layer 207
+111: image/headimg.jpg==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/image/headimg.jpg==>from: <200 http://winiis.com/winmydns.html>
+layer 208
+外链http://winmydns.winiis.com/==>from: <200 http://winiis.com/winmydns.html>
+layer 209
+外链http://www.winiis.com/download/WinMyDNS_V1.70.rar==>from: <200 http://winiis.com/winmydns.html>
+layer 210
+111: js/footer.js==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/js/footer.js==>from: <200 http://winiis.com/winmydns.html>
+layer 211
+111: js/baidu.js==>from: <200 http://winiis.com/winmydns.html>
+内链http://winiis.com/js/baidu.js==>from: <200 http://winiis.com/winmydns.html>
+layer 212
+all_urls:{'js/footer.js', 'js/leftmenu.js', 'http://winmydns.winiis.com/', 'http://www.winiis.com/download/WinMyDNS_V1.70.rar', 'css/htmleaf-demo.css', 'image/headimg.jpg', 'js/header.js', 'css/index.css', 'css/icon/iconfont.css', 'js/consult.js', 'about.html', 'favicon.ico', 'js/baidu.js', 'js/jquery.min.js'}
+start_urls ['http://winiis.com/']
+all_urls:set()
+start_urls ['http://winiis.com/']
+111: css/htmleaf-demo.css==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/css/htmleaf-demo.css==>from: <200 http://winiis.com/winsafety.html>
+layer 213
+111: css/index.css==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/css/index.css==>from: <200 http://winiis.com/winsafety.html>
+layer 214
+111: css/icon/iconfont.css==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/css/icon/iconfont.css==>from: <200 http://winiis.com/winsafety.html>
+layer 215
+111: js/jquery.min.js==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/js/jquery.min.js==>from: <200 http://winiis.com/winsafety.html>
+layer 216
+111: js/header.js==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/js/header.js==>from: <200 http://winiis.com/winsafety.html>
+layer 217
+111: js/consult.js==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/js/consult.js==>from: <200 http://winiis.com/winsafety.html>
+layer 218
+111: js/leftmenu.js==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/js/leftmenu.js==>from: <200 http://winiis.com/winsafety.html>
+layer 219
+111: favicon.ico==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/favicon.ico==>from: <200 http://winiis.com/winsafety.html>
+layer 220
+111: about.html==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/about.html==>from: <200 http://winiis.com/winsafety.html>
+layer 221
+111: image/headimg.jpg==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/image/headimg.jpg==>from: <200 http://winiis.com/winsafety.html>
+layer 222
+外链http://fz.winiis.net:8011/==>from: <200 http://winiis.com/winsafety.html>
+layer 223
+111: winidcisp.html==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/winidcisp.html==>from: <200 http://winiis.com/winsafety.html>
+layer 224
+111: js/footer.js==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/js/footer.js==>from: <200 http://winiis.com/winsafety.html>
+layer 225
+111: js/baidu.js==>from: <200 http://winiis.com/winsafety.html>
+内链http://winiis.com/js/baidu.js==>from: <200 http://winiis.com/winsafety.html>
+layer 226
+all_urls:{'js/footer.js', 'js/leftmenu.js', 'css/htmleaf-demo.css', 'image/headimg.jpg', 'winidcisp.html', 'js/header.js', 'css/index.css', 'css/icon/iconfont.css', 'js/consult.js', 'about.html', 'favicon.ico', 'http://fz.winiis.net:8011/', 'js/baidu.js', 'js/jquery.min.js'}
+start_urls ['http://winiis.com/']
+111: #==>from: <200 http://winiis.com/js/jquery.min.js>
+内链http://winiis.com/==>from: <200 http://winiis.com/js/jquery.min.js>2018-10-16 16:08:11 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/jquery.min.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': '#内链<200 http://winiis.com/js/jquery.min.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/image/zz3.jpg> (referer: http://winiis.com/)
+2018-10-16 16:08:13 [scrapy.core.scraper] ERROR: Spider error processing <GET http://winiis.com/image/zz3.jpg> (referer: http://winiis.com/)
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/www/scrapy20180929/cnblogSpider/cnblogSpider/spiders/cnblogs_com.py", line 25, in parse
+    all_link = response.xpath("//*//@src | //*//@href | //*//@url |  //*//@ocde" ).extract() #页面内的所有链接
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/http/response/__init__.py", line 105, in xpath
+    raise NotSupported("Response content isn't text")
+scrapy.exceptions.NotSupported: Response content isn't text
+2018-10-16 16:08:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/css/icon/iconfont.css> (referer: http://winiis.com/)
+2018-10-16 16:08:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/image/thumbzz4.jpg> (referer: http://winiis.com/)
+2018-10-16 16:08:18 [scrapy.core.scraper] ERROR: Spider error processing <GET http://winiis.com/image/thumbzz4.jpg> (referer: http://winiis.com/)
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/www/scrapy20180929/cnblogSpider/cnblogSpider/spiders/cnblogs_com.py", line 25, in parse
+    all_link = response.xpath("//*//@src | //*//@href | //*//@url |  //*//@ocde" ).extract() #页面内的所有链接
+  File "/usr/local/python3/lib/python3.6/site-packages/scrapy/http/response/__init__.py", line 105, in xpath
+    raise NotSupported("Response content isn't text")
+scrapy.exceptions.NotSupported: Response content isn't text
+2018-10-16 16:08:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/js/consult.js> (referer: http://winiis.com/)
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/close.png内链<200 http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/qq1.jpg内链<200 http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=819895631&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=819895631&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/qq1.jpg内链<200 http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=799166148&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=799166148&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/qq1.jpg内链<200 http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=610297365&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=610297365&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/qq1.jpg内链<200 http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=2692624570&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=2692624570&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/qq1.jpg内链<200 http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=837845568&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=837845568&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/qq1.jpg内链<200 http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=1297984477&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=1297984477&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/qq1.jpg内链<200 http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=3392931168&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=3392931168&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/qq1.jpg内链<200 http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=529226441&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=529226441&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/qq1.jpg内链<200 http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=2379260979&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=2379260979&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/qq1.jpg内链<200 http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=800080909&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/consult.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'http://wpa.qq.com/msgrd?v=3&uin=800080909&site=qq&menu=yes<200 '
+         'http://winiis.com/js/consult.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:22 [scrapy.extensions.logstats] INFO: Crawled 25 pages (at 25 pages/min), scraped 270 items (at 270 items/min)
+2018-10-16 16:08:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/js/carousel.js> (referer: http://winiis.com/)
+2018-10-16 16:08:26 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2018-10-16 16:08:26 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2018-10-16 16:08:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://winiis.com/js/footer.js> (referer: http://winiis.com/)
+2018-10-16 16:08:26 [scrapy.core.scraper] DEBUG: Scraped from <200 http://winiis.com/js/footer.js>
+{'hash_start_link': '36a0f26c8c726b54401429c5016b1e2f',
+ 'link': 'image/gongan.png内链<200 http://winiis.com/js/footer.js>',
+ 'start_link': 'http://winiis.com/'}
+2018-10-16 16:08:27 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+
+layer 227
+all_urls:{'#'}
+start_urls ['http://winiis.com/']
+start_urls ['http://winiis.com/']
+all_urls:set()
+start_urls ['http://winiis.com/']
+start_urls ['http://winiis.com/']
+111: image/close.png==>from: <200 http://winiis.com/js/consult.js>
+内链http://winiis.com/image/close.png==>from: <200 http://winiis.com/js/consult.js>
+layer 228
+111: image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+内链http://winiis.com/image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+layer 229
+外链http://wpa.qq.com/msgrd?v=3&uin=819895631&site=qq&menu=yes==>from: <200 http://winiis.com/js/consult.js>
+layer 230
+111: image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+内链http://winiis.com/image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+layer 231
+外链http://wpa.qq.com/msgrd?v=3&uin=799166148&site=qq&menu=yes==>from: <200 http://winiis.com/js/consult.js>
+layer 232
+111: image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+内链http://winiis.com/image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+layer 233
+外链http://wpa.qq.com/msgrd?v=3&uin=610297365&site=qq&menu=yes==>from: <200 http://winiis.com/js/consult.js>
+layer 234
+111: image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+内链http://winiis.com/image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+layer 235
+外链http://wpa.qq.com/msgrd?v=3&uin=2692624570&site=qq&menu=yes==>from: <200 http://winiis.com/js/consult.js>
+layer 236
+111: image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+内链http://winiis.com/image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+layer 237
+外链http://wpa.qq.com/msgrd?v=3&uin=837845568&site=qq&menu=yes==>from: <200 http://winiis.com/js/consult.js>
+layer 238
+111: image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+内链http://winiis.com/image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+layer 239
+外链http://wpa.qq.com/msgrd?v=3&uin=1297984477&site=qq&menu=yes==>from: <200 http://winiis.com/js/consult.js>
+layer 240
+111: image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+内链http://winiis.com/image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+layer 241
+外链http://wpa.qq.com/msgrd?v=3&uin=3392931168&site=qq&menu=yes==>from: <200 http://winiis.com/js/consult.js>
+layer 242
+111: image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+内链http://winiis.com/image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+layer 243
+外链http://wpa.qq.com/msgrd?v=3&uin=529226441&site=qq&menu=yes==>from: <200 http://winiis.com/js/consult.js>
+layer 244
+111: image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+内链http://winiis.com/image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+layer 245
+外链http://wpa.qq.com/msgrd?v=3&uin=2379260979&site=qq&menu=yes==>from: <200 http://winiis.com/js/consult.js>
+layer 246
+111: image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+内链http://winiis.com/image/qq1.jpg==>from: <200 http://winiis.com/js/consult.js>
+layer 247
+外链http://wpa.qq.com/msgrd?v=3&uin=800080909&site=qq&menu=yes==>from: <200 http://winiis.com/js/consult.js>
+layer 248
+all_urls:{'http://wpa.qq.com/msgrd?v=3&uin=3392931168&site=qq&menu=yes', 'http://wpa.qq.com/msgrd?v=3&uin=2692624570&site=qq&menu=yes', 'http://wpa.qq.com/msgrd?v=3&uin=1297984477&site=qq&menu=yes', 'http://wpa.qq.com/msgrd?v=3&uin=837845568&site=qq&menu=yes', 'image/close.png', 'image/qq1.jpg', 'http://wpa.qq.com/msgrd?v=3&uin=610297365&site=qq&menu=yes', 'http://wpa.qq.com/msgrd?v=3&uin=800080909&site=qq&menu=yes', 'http://wpa.qq.com/msgrd?v=3&uin=529226441&site=qq&menu=yes', 'http://wpa.qq.com/msgrd?v=3&uin=2379260979&site=qq&menu=yes', 'http://wpa.qq.com/msgrd?v=3&uin=799166148&site=qq&menu=yes', 'http://wpa.qq.com/msgrd?v=3&uin=819895631&site=qq&menu=yes'}
+0000:http://winiis.com/image/qq1.jpg
+0000:http://winiis.com/image/close.png
+start_urls ['http://winiis.com/']
+all_urls:set()
+start_urls ['http://winiis.com/']
+111: image/gongan.png==>from: <200 http://winiis.com/js/footer.js>
+内链http://winiis.com/image/gongan.png==>from: <200 http://winiis.com/js/footer.js>
+layer 249
+all_urls:{'image/gongan.png'}
+0000:http://winiis.com/image/gongan.png
