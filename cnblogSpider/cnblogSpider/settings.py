@@ -17,7 +17,7 @@ BOT_NAME = 'cnblogSpider'
 SPIDER_MODULES = ['cnblogSpider.spiders']
 NEWSPIDER_MODULE = 'cnblogSpider.spiders'
 
-LOG_LEVEL = 'INFO'
+#LOG_LEVEL = 'INFO'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'cnblogSpider (+http://www.yourdomain.com)'
@@ -99,7 +99,7 @@ CONCURRENT_REQUESTS = 100
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 DEPTH_PRIORITY = 1
-DEPTH_LIMIT = 2
+DEPTH_LIMIT = 3
 SCHEDULER_DISK_QUEUE = 'scrapy.squeues.PickleFifoDiskQueue'
 SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
 
@@ -108,9 +108,9 @@ DOWNLOAD_TIMEOUT = 15
 REDIRECT_ENABLED = False
 
 ITEM_PIPELINES = {
-   'cnblogSpider.pipelines.MongoPipeline': 300,
+#   'cnblogSpider.pipelines.MongoPipeline': 300,
    'cnblogSpider.pipelines.MongoPipeline': 400,
-#   'cnblogSpider.pipelines.WebcrawlerScrapyPipeline':300
+   'cnblogSpider.pipelines.WebcrawlerScrapyPipeline':300
 }
 
 MONGO_URI='127.0.0.1'
@@ -120,7 +120,7 @@ MONGO_DB='cnblogs'
 
 MYSQL_HOST = '127.0.0.1'
 MYSQL_DBNAME = 'hlspider'         #数据库名字
-MYSQL_USER = 'root'             #数据库账号
-MYSQL_PASSWD = 'dsaDFG4h76^a'         #数据库密码
+MYSQL_USER = 'hlspider'             #数据库账号
+MYSQL_PASSWD = 'jsdadv4g8t48sg'         #数据库密码
 
 MYSQL_PORT = 3306               #数据库端口

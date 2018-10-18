@@ -22,6 +22,19 @@ class CnblogspiderPipeline(object):
                 raise DropItem("Duplicate item found: %s" % item)
             else:
                 self.ids_seen.add(item['link'])
+        
+        if item['out_link']:
+            if item['out_link'] in self.ids_seen:
+                raise DropItem("Duplicate item found: %s" % item)
+            else:
+                self.ids_seen.add(item['out_link'])
+        if item['inner_link']:
+            if item['inner_link'] in self.ids_seen:
+                raise DropItem("Duplicate item found: %s" % item)
+            else:
+                self.ids_seen.add(item['inner_link'])
+
+
         if item['start_link']:
 
             if item['start_link'] in self.ids_seen:
@@ -97,8 +110,23 @@ class WebcrawlerScrapyPipeline(object):
         log.msg("-------------------打印-------------------")
 
         #if not conn.execute("select hash_start_link from starturl where start_url= %s",(item['hash_start_link'])):
-        conn.execute("insert into StartUrl (hash_start_link , start_url) values(%s, %s)",
-                     (item['hash_start_link'], item['start_link']))
+        
+        #if  conn.execute("select hash_start_link from starturl where hash_start_link=\"%s\" limit 1 ;", item['hash_start_link']) > 0 :
+        log.msg("-------------------ceshi111-------------------")
+        #conn.execute("insert into starturl (hash_start_link , start_url) values(%s, %s);",(item['hash_start_link'], item['start_link']))
+        try:
+            if item['inner_link'] is None :
+                conn.execute("insert into spider_url (from_url, out_url ,  hash_start_link, layer) values(%s, %s, %s, %s);",(item['from_link'], item['out_link'], item['hash_start_link'],item['layer']))
+            else:
+                #log.msg("lll" + item['inner_link'])
+                #conn.execute("insert into spider_url (from_url, inner_url ,  hash_start_link) values(%s, %s, %s);",(item['from_link'], item['inner_link'], item['hash_start_link']))
+                conn.execute("insert into spider_url (from_url, inner_url ,  hash_start_link, layer) values(%s, %s, %s, %s);",(item['from_link'], item['inner_link'], item['hash_start_link'],item['layer']))
+
+        #else:
+            conn.execute("insert into StartUrl (hash_start_link , start_url) values(%s, %s)",(item['hash_start_link'], item['start_link']))
+        except Exception as e:
+            #conn.execute("insert into spider_url (from_url, inner_url ,  hash_start_link) values(%s, %s, %s);",(item['from_link'], item['inner_link'], item['hash_start_link']))
+            raise
         log.msg("-------------------一轮循环完毕-------------------")
     def _handle_error(self, failue, item, spider):
         print(failue)

@@ -16,8 +16,8 @@ class CnblogsComSpider(scrapy.Spider):
     
 
     def parse(self, response):
-        inner_link = None
-        print("start_urls",self.start_urls)
+        inner_link = str()
+       # print("start_urls",self.start_urls)
       #  all_urls = set()
         urls = set()
         all_urls= set()
@@ -25,47 +25,52 @@ class CnblogsComSpider(scrapy.Spider):
         all_link = response.xpath("//*//@src | //*//@href | //*//@url |  //*//@ocde" ).extract() #页面内的所有链接
         #item = CnblogspiderItem()
         
-
+        
         for link in all_link:
             all_urls.add(link)
             item = CnblogspiderItem()
             item['start_link'] = self.start_urls[0]
             item['hash_start_link'] = hashlib.md5(b'self.start_urls[0]').hexdigest()
             item['from_link'] = str(response.url)
+            print("meta11:"+ str(response.meta['depth'] + 1))
+            item['layer'] = response.meta['depth'] + 1
 
             if not link.startswith('http'):
                 inner_link = link
-                print("111: "+ str(inner_link)  + "==>from: " + str(response) )
+            #    print("111: "+ str(inner_link)  + "==>from: " + str(response) )
                 link = urljoin(self.start_urls[0],link)
             
             if urlparse(link).netloc != urlparse(self.start_urls[0]).netloc:
-                print("外链" + link + "==>from: " + str(response))
+               # print("外链" + link + "==>from: " + str(response))
                 out_link = link
                 inner_link = str()
-                item['link'] = link + str(response)
+                item['out_link'] = link
                # item['from_link'] = str(response)
+                item['inner_link'] = None
                 yield item
             else:
                 if inner_link:
-                    item['link'] = inner_link + "内链" + str(response)
+                    item['inner_link'] = inner_link
                 else:
-                    item['link'] = link + "内链" + str(response)
-                    
+                    item['inner_link'] = link 
+                
+                item['out_link'] = None
                 urls.add(link)
                 print("内链" + link + "==>from: " + str(response) )
                 #item['from_link'] = str(response)
             self.layer +=1
-            print("layer",str(self.layer))
+         #   print("layer",str(self.layer))
+            print("out_link:" + str(item['out_link']))
 
             yield item
-        print("all_urls:"+ str(all_urls))
+        #print("all_urls:"+ str(all_urls))
         new_urls = urls - self.ALL_urls
         urls_list = list(new_urls)
         self.ALL_urls = self.ALL_urls.union(urls)
        
         #print("内链:" + urls_list)
         for url in urls_list:
-            print("0000:" + url)
+            #print("0000:" + url)
             url = response.urljoin(url)
             yield scrapy.Request(url=url, callback=self.parse)
 
