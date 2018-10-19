@@ -9,6 +9,7 @@ class CnblogsComSpider(scrapy.Spider):
    # start_urls = ['http://www.cnblogs.com/qiyeboy/default.html?page=1']
     start_urls = ['http://winiis.com/']
     ALL_urls = set()
+    ALL_urls.add(start_urls[0])
     layer = 1
     url_list = {}
     inner_link = set()
@@ -30,7 +31,7 @@ class CnblogsComSpider(scrapy.Spider):
             all_urls.add(link)
             item = CnblogspiderItem()
             item['start_link'] = self.start_urls[0]
-            item['hash_start_link'] = hashlib.md5(b'self.start_urls[0]').hexdigest()
+            item['hash_start_link'] = hashlib.md5(self.start_urls[0].encode("gb2312")).hexdigest()
             item['from_link'] = str(response.url)
             print("meta11:"+ str(response.meta['depth'] + 1))
             item['layer'] = response.meta['depth'] + 1
@@ -41,20 +42,24 @@ class CnblogsComSpider(scrapy.Spider):
                 link = urljoin(self.start_urls[0],link)
             
             if urlparse(link).netloc != urlparse(self.start_urls[0]).netloc:
-               # print("外链" + link + "==>from: " + str(response))
+                print("外链" + link + "==>from: " + str(response))
                 out_link = link
                 inner_link = str()
                 item['out_link'] = link
                # item['from_link'] = str(response)
+                item['out_link_hash'] = hashlib.md5(link.encode("gb2312")).hexdigest()
                 item['inner_link'] = None
                 yield item
             else:
                 if inner_link:
                     item['inner_link'] = inner_link
+                    item['inner_link_hash'] = hashlib.md5(inner_link.encode("gb2312")).hexdigest()
                 else:
                     item['inner_link'] = link 
+                    item['inner_link_hash'] = hashlib.md5(link.encode("gb2312")).hexdigest()
                 
                 item['out_link'] = None
+                print("link111" + link)
                 urls.add(link)
                 print("内链" + link + "==>from: " + str(response) )
                 #item['from_link'] = str(response)
@@ -63,9 +68,11 @@ class CnblogsComSpider(scrapy.Spider):
             print("out_link:" + str(item['out_link']))
 
             yield item
-        #print("all_urls:"+ str(all_urls))
+        print("all_urls:"+ str(self.ALL_urls))
+
         new_urls = urls - self.ALL_urls
         urls_list = list(new_urls)
+        #print("new_urls" + urls_list)
         self.ALL_urls = self.ALL_urls.union(urls)
        
         #print("内链:" + urls_list)

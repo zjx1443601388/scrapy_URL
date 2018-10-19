@@ -47,6 +47,17 @@ class CnblogspiderPipeline(object):
                 raise DropItem("Duplicate item found: %s" % item)
             else:
                 self.ids_seen.add(item['hash_start_link'])
+        if item['out_link_link']:
+            if item['out_link_link'] in self.ids_seen:
+                raise DropItem("Duplicate item found: %s" % item)
+            else:
+                self.ids_seen.add(item['out_link_hash'])
+
+        if item['inner_link_link']:
+            if item['inner_link_link'] in self.ids_seen:
+                raise DropItem("Duplicate item found: %s" % item)
+            else:
+                self.ids_seen.add(item['inner_link_hash'])
 
         if not item['from_link']:
             raise DropItem("Duplicate item found: %s" % item)
@@ -116,11 +127,11 @@ class WebcrawlerScrapyPipeline(object):
         #conn.execute("insert into starturl (hash_start_link , start_url) values(%s, %s);",(item['hash_start_link'], item['start_link']))
         try:
             if item['inner_link'] is None :
-                conn.execute("insert into spider_url (from_url, out_url ,  hash_start_link, layer) values(%s, %s, %s, %s);",(item['from_link'], item['out_link'], item['hash_start_link'],item['layer']))
+                conn.execute("insert into out_spider_url (from_url, out_url ,hash_start_link, out_url_hash, layer) values(%s, %s, %s, %s, %s);",(item['from_link'], item['out_link'], item['hash_start_link'],item['out_link_hash'], item['layer']))
             else:
                 #log.msg("lll" + item['inner_link'])
                 #conn.execute("insert into spider_url (from_url, inner_url ,  hash_start_link) values(%s, %s, %s);",(item['from_link'], item['inner_link'], item['hash_start_link']))
-                conn.execute("insert into spider_url (from_url, inner_url ,  hash_start_link, layer) values(%s, %s, %s, %s);",(item['from_link'], item['inner_link'], item['hash_start_link'],item['layer']))
+                conn.execute("insert into inner_spider_url (from_url, inner_url ,  hash_start_link, inner_url_hash,  layer) values(%s, %s, %s, %s, %s);",(item['from_link'], item['inner_link'], item['hash_start_link'],item['inner_link_hash'], item['layer']))
 
         #else:
             conn.execute("insert into StartUrl (hash_start_link , start_url) values(%s, %s)",(item['hash_start_link'], item['start_link']))
