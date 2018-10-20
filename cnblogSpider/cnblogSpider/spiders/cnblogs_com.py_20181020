@@ -3,8 +3,6 @@ import scrapy
 from cnblogSpider.items import CnblogspiderItem
 from urllib.parse import urljoin, urlparse
 import hashlib
-import re
-from bs4 import BeautifulSoup
 class CnblogsComSpider(scrapy.Spider):
     name = 'cnblogs'
     allowed_domains = ['winiis.com']
@@ -17,20 +15,6 @@ class CnblogsComSpider(scrapy.Spider):
     inner_link = set()
     out_link = set()
     
-
-    def html_label(self, lable1):
-        if self.lable1 == "<a":
-            return 1
-        elif self.lable1 == "<link":
-            return 2
-        elif self.lable1 == "<script":
-            return 3
-        elif self.lable1 == "<img":
-            return 4
-        elif self.lable1 == "<video":
-            return 5
-        else:
-            return 6
 
     def parse(self, response):
         inner_link = str()
@@ -51,62 +35,6 @@ class CnblogsComSpider(scrapy.Spider):
             item['from_link'] = str(response.url)
             print("meta11:"+ str(response.meta['depth'] + 1))
             item['layer'] = response.meta['depth'] + 1
-
-            soup = BeautifulSoup(response.text,"lxml")
-            href = soup.find_all(attrs={"href": link})
-            if href != []:
-                href_s = str(href[0])
-                data = href_s.split()[0]
-                print("dada" + data)
-                
-                if data == "<a":
-                    url_lable = 1
-                elif data == "<link":
-                    soup1 = BeautifulSoup(href_s,'lxml')
-                    if soup1.link['type'] == "text/css":
-                        url_lable = 2
-                    elif soup1.link['type'] == "image/x-icon":
-                        url_lable = 4
-                    else:
-                        url_lable = 6
-                elif data == "<script":
-                    url_lable = 3
-                elif data == "<img":
-                    url_lable = 4
-                elif data == "<video":
-                    url_lable = 5
-                else:
-                    url_lable = 6
-
-
-            else:
-                src = soup.find_all(attrs={"src": link})
-                if src != []:
-                    src_s = str(src[0])
-                    data = str(src_s.split()[0])
-                    if data == "<a":
-                        url_lable = 1
-                    elif data == "<link":
-                        url_lable = 2
-                    elif data == "<script":
-                        url_lable = 3
-                    elif data == "<img":
-                        url_lable = 4
-                    elif data == "<video":
-                        url_lable = 5
-                    else:
-                        url_lable = 6
-
-
-                    
-                else:
-                    url_lable = 6
-            print("url_lable: "+ link + "11" + str(url_lable))
-            item['type1'] = url_lable
-
-             
-
-                
 
             if not link.startswith('http'):
                 inner_link = link
@@ -138,7 +66,6 @@ class CnblogsComSpider(scrapy.Spider):
             self.layer +=1
          #   print("layer",str(self.layer))
             print("out_link:" + str(item['out_link']))
-
 
             yield item
         print("all_urls:"+ str(self.ALL_urls))

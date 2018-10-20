@@ -20,6 +20,8 @@ class CnblogspiderItem(scrapy.Item):
     layer = scrapy.Field()
     out_link_hash = scrapy.Field()
     inner_link_hash = scrapy.Field()
+    type1 = scrapy.Field()
+
 
 class JiandanItem(scrapy.Item):
 #    define the fields for your item here like:
